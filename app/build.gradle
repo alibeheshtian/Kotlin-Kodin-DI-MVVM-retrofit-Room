@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    defaultConfig {
+        applicationId "com.iapptm.coreapp"
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        // add parameter to BuildConfig class
+        buildConfigField 'String', "BASE_URL", BASE_URL
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // KotlinSDK
+    api deps.kotlinsdk
+
+    //Kodein (Dependency Injection)
+    api deps.kodein
+    api deps.kodeinAndroidSupport
+
+    // Android Support
+    api deps.appcompat
+    api deps.material
+    api deps.recyclerview
+    api deps.supportFragment
+    api deps.supportCoreUi
+    api deps.vectordrawable
+    api deps.constraintLayout
+
+    //Architecture Components
+    api deps.archExtenstion
+    api deps.archViewmmodel
+    api deps.archLivdata
+    api deps.reactiveStreams
+    kapt deps.archCompiler
+
+    // Timber
+    api deps.timber
+
+    // UtilCode
+    api deps.utilcode
+
+    // Retrofit 2
+    api deps.retrofit
+    api deps.retrofitgson
+    api deps.retrofitrx
+    api deps.okhttplogger
+
+    // Rx
+    api deps.rxjava2
+    api deps.rxandroid2
+
+    // Font
+    api deps.font
+
+    // Glide
+    api deps.glide
+    kapt deps.glideCompiler
+
+    // Testing Application
+    testImplementation deps.junit
+    testImplementation deps.runner
+    testImplementation deps.espressocore
+
+}
