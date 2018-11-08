@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion COMPILE_SDK_VERSION
     defaultConfig {
@@ -26,7 +28,11 @@ android {
         }
     }
 }
-
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -45,6 +51,8 @@ dependencies {
     api deps.supportCoreUi
     api deps.vectordrawable
     api deps.constraintLayout
+    api deps.kotlinxCoroutinesCore
+    api deps.kotlinxCoroutinesAndroid
 
     //Architecture Components
     api deps.archExtenstion
@@ -52,6 +60,9 @@ dependencies {
     api deps.archLivdata
     api deps.reactiveStreams
     kapt deps.archCompiler
+    api deps.roomCommon
+    api deps.roomRuntime
+    kapt deps.roomCompiler
 
     // Timber
     api deps.timber
@@ -80,5 +91,6 @@ dependencies {
     testImplementation deps.junit
     testImplementation deps.runner
     testImplementation deps.espressocore
+    testImplementation deps.roomTesting
 
 }

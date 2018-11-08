@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.blankj.utilcode.util.Utils
 import com.iapptm.coreapp.di.appModule
+import com.iapptm.coreapp.di.dataBaseModel
 import com.iapptm.coreapp.di.networkModule
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -19,6 +20,7 @@ class CoreApplication : Application(), KodeinAware {
         bind<CoreApplication>() with singleton { this@CoreApplication }
         import(appModule)
         import(networkModule)
+        import(dataBaseModel)
     }
 
     override fun onCreate() {

@@ -1,4 +1,4 @@
-package com.iapptm.coreapp.database
+package com.iapptm.coreapp.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

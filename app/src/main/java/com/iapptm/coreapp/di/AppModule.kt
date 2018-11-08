@@ -17,12 +17,10 @@ import org.kodein.di.generic.singleton
 private const val MODULE_NAME = "App Module"
 
 val appModule = Module(MODULE_NAME, false) {
-  bind<PrefsUtils>() with singleton { getPrefsUtils(instance("ApplicationContext")) }
   bind<Resources>() with singleton { instance<CoreApplication>().resources }
   bind<IRxSchedulers>() with singleton { getIRxSchedulers() }
 }
 
-private fun getPrefsUtils(context: Context): PrefsUtils = PrefsUtils(PreferenceManager.getDefaultSharedPreferences(context))
 
 private fun getIRxSchedulers() = object : IRxSchedulers {
   override fun main(): Scheduler = AndroidSchedulers.mainThread()

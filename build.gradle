@@ -61,12 +61,18 @@ ext {
             supportFragment      : "androidx.fragment:fragment:${ANDROID_VERSION}",
             supportCoreUi        : "androidx.legacy:legacy-support-core-ui:${ANDROID_VERSION}",
             vectordrawable       : "androidx.vectordrawable:vectordrawable:${ANDROID_VERSION}",
+            kotlinxCoroutinesCore : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${ANDROID_VERSION}",
+            kotlinxCoroutinesAndroid : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${ANDROID_VERSION}",
 
             archExtenstion       : "androidx.lifecycle:lifecycle-extensions:$ARCH_VERSION",
             archViewmmodel       : "androidx.lifecycle:lifecycle-viewmodel:$ARCH_VERSION",
             archLivdata          : "androidx.lifecycle:lifecycle-livedata:$ARCH_VERSION",
             archCompiler         : "androidx.lifecycle:lifecycle-compiler:$ARCH_VERSION",
             reactiveStreams      : "androidx.lifecycle:lifecycle-reactivestreams:$ARCH_VERSION",
+            roomCommon           : "androidx.room:room-common:$ARCH_VERSION",
+            roomRuntime          : "androidx.room:room-runtime:$ARCH_VERSION",
+            roomCompiler         : "androidx.room:room-compiler:$ARCH_VERSION",
+            roomTesting          : "android.arch.persistence.room:testing:$ARCH_VERSION",
 
             rxjava2              : "io.reactivex.rxjava2:rxjava:$RX_VERSION",
             rxandroid2           : "io.reactivex.rxjava2:rxandroid:$RX_ANDROID_VERSION",
