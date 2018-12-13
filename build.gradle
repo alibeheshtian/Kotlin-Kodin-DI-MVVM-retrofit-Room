@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.KOTLIN_VERSION = '1.3.0'
+    ext.KOTLIN_VERSION = '1.3.11'
 
     repositories {
         google()
@@ -37,80 +37,15 @@ ext {
 
     ANDROID_VERSION = '1.0.0'
 
-    RETROFIT_VERSION = '2.4.0'
+    RETROFIT_VERSION = '2.5.0'
     GSON_VERSION = '2.8.5'
     GLIDE_VERSION = '4.8.0'
     EXO_PLAYER_VERSION = '2.8.4'
-    OKHTTP_VERSION = '3.10.0'
-    RX_VERSION = '2.2.3'
+    OKHTTP_VERSION = '3.12.0'
+    RX_VERSION = '2.2.4'
     RX_ANDROID_VERSION = '2.1.0'
     ARCH_VERSION = '2.0.0'
-    KODEIN_VERSION = '5.3.0'
+    KODEIN_VERSION = '6.0.1'
     TEST_RUNNER_VERSION = '1.0.2'
     CONSTRAINT_LAYOUT_VERSION = '1.1.3'
-
-
-    ext.deps = [
-            kotlinsdk            : "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION",
-
-            annotations          : "androidx.annotation:annotation:${ANDROID_VERSION}",
-            appcompat            : "androidx.appcompat:appcompat:${ANDROID_VERSION}",
-            supportV13           : "androidx.legacy:legacy-support-v13:${ANDROID_VERSION}",
-            material             : "com.google.android.material:material:${ANDROID_VERSION}",
-            recyclerview         : "androidx.recyclerview:recyclerview:${ANDROID_VERSION}",
-            supportFragment      : "androidx.fragment:fragment:${ANDROID_VERSION}",
-            supportCoreUi        : "androidx.legacy:legacy-support-core-ui:${ANDROID_VERSION}",
-            vectordrawable       : "androidx.vectordrawable:vectordrawable:${ANDROID_VERSION}",
-            kotlinxCoroutinesCore : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${ANDROID_VERSION}",
-            kotlinxCoroutinesAndroid : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${ANDROID_VERSION}",
-
-            archExtenstion       : "androidx.lifecycle:lifecycle-extensions:$ARCH_VERSION",
-            archViewmmodel       : "androidx.lifecycle:lifecycle-viewmodel:$ARCH_VERSION",
-            archLivdata          : "androidx.lifecycle:lifecycle-livedata:$ARCH_VERSION",
-            archCompiler         : "androidx.lifecycle:lifecycle-compiler:$ARCH_VERSION",
-            reactiveStreams      : "androidx.lifecycle:lifecycle-reactivestreams:$ARCH_VERSION",
-            roomCommon           : "androidx.room:room-common:$ARCH_VERSION",
-            roomRuntime          : "androidx.room:room-runtime:$ARCH_VERSION",
-            roomCompiler         : "androidx.room:room-compiler:$ARCH_VERSION",
-            roomTesting          : "android.arch.persistence.room:testing:$ARCH_VERSION",
-
-            rxjava2              : "io.reactivex.rxjava2:rxjava:$RX_VERSION",
-            rxandroid2           : "io.reactivex.rxjava2:rxandroid:$RX_ANDROID_VERSION",
-
-
-            utilcode             : "com.blankj:utilcode:1.21.2",
-
-            circleimageview      : 'de.hdodenhof:circleimageview:2.2.0',
-
-            constraintLayout     : "androidx.constraintlayout:constraintlayout:${CONSTRAINT_LAYOUT_VERSION}",
-
-            retrofit             : "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}",
-            retrofitgson         : "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}",
-            retrofitrx           : "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERSION}",
-
-            gson                 : "com.google.code.gson:gson:${GSON_VERSION}",
-
-            okhttp               : "com.squareup.okhttp3:okhttp:${OKHTTP_VERSION}",
-            okhttplogger         : "com.squareup.okhttp3:logging-interceptor:${OKHTTP_VERSION}",
-
-            rxbinding            : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
-            rxpermissions        : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5',
-
-            timber               : 'com.jakewharton.timber:timber:4.7.1',
-
-            glide                : "com.github.bumptech.glide:glide:${GLIDE_VERSION}",
-            glideCompiler        : "com.github.bumptech.glide:compiler:${GLIDE_VERSION}",
-
-            font                 : 'uk.co.chrisjenx:calligraphy:2.3.0',
-
-            junit                : 'junit:junit:4.12',
-            truth                : 'com.google.truth:truth:0.42',
-            runner                : 'androidx.test:runner:1.1.0',
-            espressocore         : 'androidx.test.espresso:espresso-core:3.1.0',
-            mockitocore          : 'org.mockito:mockito-core:2.23.0',
-
-            kodein               : "org.kodein.di:kodein-di-generic-jvm:${KODEIN_VERSION}",
-            kodeinAndroidSupport : "org.kodein.di:kodein-di-framework-android-support:${KODEIN_VERSION}"
-
-    ]
 }

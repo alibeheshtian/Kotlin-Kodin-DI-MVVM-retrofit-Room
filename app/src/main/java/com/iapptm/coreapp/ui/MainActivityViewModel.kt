@@ -25,20 +25,12 @@ import timber.log.Timber
 import kotlin.coroutines.CoroutineContext
 
 
-class MainActivityViewModel(context: Context) : BaseViewModel(), KodeinAware {
-    override val kodein: Kodein by closestKodein(context)
-    override val kodeinContext = kcontext(context)
-
+class MainActivityViewModel(context: Context) : BaseViewModel(context) {
 
     private var parentJob = Job()
-    private val coroutineContext: CoroutineContext
-        get() = parentJob + Dispatchers.Main
+    private val coroutineContext: CoroutineContext = parentJob + Dispatchers.Main
     private val scope = CoroutineScope(coroutineContext)
 
-
-    private val apiService: ApiService by instance()
-    private val schedulers: IRxSchedulers by instance()
-    private val repository: MovieRepository by instance()
     var movies: MutableLiveData<List<MovieModel>> = MutableLiveData()
     var moviesStored: LiveData<List<MovieEntity>> = repository.allMovies
 

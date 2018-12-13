@@ -35,7 +35,6 @@ class MainActivity : BaseActivity(layout = R.layout.activity_main) {
             title=it.size.toString()
         })
 
-
         viewModel.fetchMovies()
 
     }
