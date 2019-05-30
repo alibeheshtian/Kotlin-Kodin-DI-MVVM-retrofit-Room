@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">dependency</string>
+
+    <string name="need_access_to_local_storage">Needs access to your device local storage.</string>
+
+    <string name="logout_dialog_description">Are you sure do you want to logout?</string>
+
+    <string name="shenoto_plus_description">You need Shenoto plus account.</string>
+
+    <string name="login">Login</string>
+
+    <string name="check_your_internet">Check your internet connection.</string>
+
+    <string name="retry">Retry</string>
+
+</resources>

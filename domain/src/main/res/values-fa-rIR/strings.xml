@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">dependency</string>
+    <string name="need_access_to_local_storage">نیاز به اجازه برای دسترسی به فضای داخلی دستگاه</string>
+    <string name="logout_dialog_description">آیا می خواهید از برنامه خارج شوید؟</string>
+    <string name="shenoto_plus_description">شما به شنوتو پلاس نیاز دارید.</string>
+    <string name="login">Login</string>
+    <string name="check_your_internet">اتصال اینترنت خود را بررسی کنید.</string>
+    <string name="retry">تلاش مجدد</string>
+</resources>

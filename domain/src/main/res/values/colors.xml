@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ee3e3a</color>
+    <color name="colorPrimaryDark">#ee3e3a</color>
+    <color name="colorAccent">#ee3e3a</color>
+
+    <color name="mediaListBackground">#F1F1F1</color>
+
+    <color name="mediaControlColor">#f8f8f8</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="orangeLight">#febd34</color>
+    <color name="orange">#fca238</color>
+    <color name="orangeDark">#f14e4b</color>
+    <color name="gray">#848484</color>
+    <color name="grayLight">#e7e7e7</color>
+    <color name="green">#00e676</color>
+    <color name="red">#ff0000</color>
+</resources>
