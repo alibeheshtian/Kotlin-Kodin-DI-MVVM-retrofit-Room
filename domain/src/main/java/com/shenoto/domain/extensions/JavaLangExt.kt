@@ -22,11 +22,17 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.palette.graphics.Palette
 import com.blankj.utilcode.util.ActivityUtils
+import com.blankj.utilcode.util.GsonUtils.fromJson
 import com.blankj.utilcode.util.ImageUtils
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.shenoto.domain.R
+import com.shenoto.domain.bases.BaseErrorModel
+import retrofit2.HttpException
+import retrofit2.adapter.rxjava2.Result
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -183,6 +189,22 @@ inline val Drawable?.createPaletteSync: Palette?
     }
 
 fun String?.toUri(): Uri = this?.let { Uri.parse(it) } ?: Uri.EMPTY
+
+inline fun <reified T> Gson.fromJson(json: String) = this.fromJson<T>(json, object: TypeToken<T>() {}.type)
+
+inline fun <reified T> HttpException.errorModel() : BaseErrorModel<T>?{
+    return try {
+        Gson().fromJson<BaseErrorModel<T>>(this.response().errorBody()!!.string())
+    } catch (e: Exception) {
+        e.printStackTrace()
+        null
+    } finally {
+        this.response().errorBody()?.close()
+    }
+}
+
+
+//    fromJson<T>(json, object: TypeToken<T>() {}.type)
 
 //        if (this == null && other == null) {
 //            true

@@ -20,8 +20,7 @@ val dataBaseModel = Module(MODULE_NAME, false) {
 
     bind<MovieDatabase>() with singleton {MovieDatabase.getDatabase(instance("ApplicationContext") ) }
     bind<MovieDao>() with singleton { instance<MovieDatabase>().wordMovieDao() }
-    bind<MovieRepository>() with provider { MovieRepository(instance())
-    }
+    bind<MovieRepository>() with provider { MovieRepository(instance()) }
 
 }
 
