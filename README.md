@@ -8,7 +8,9 @@
  
  3- architect: MVVM
  
- 4- network cominioretrofit-Room
+ 4- network: retrofit
+ 
+ 5- database: Room
 
 
 Introduction
