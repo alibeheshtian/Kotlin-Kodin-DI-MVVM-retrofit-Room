@@ -41,7 +41,7 @@ dependencies {
 
     //region Android Support Libs
     api 'androidx.annotation:annotation:1.1.0'
-    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.appcompat:appcompat:1.6.1'
     api 'com.google.android.material:material:1.1.0-beta01'
     api "androidx.legacy:legacy-support-v13:1.0.0"
     api 'androidx.recyclerview:recyclerview:1.1.0-beta04'
